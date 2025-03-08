@@ -1,9 +1,10 @@
+
 @keyframes moving {
   from {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-10%);
+    transform: translateX(-50%);
   }
 }
 
@@ -15,12 +16,14 @@
 
 .moving {
   position: absolute;
-  top: 50%;
+  top: 50%; /* Position below title */
   transform: translateY(-50%);
   width: 100%;
-  z-index: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  z-index: 1;
+  opacity: 0; /* Hidden by default */
+  background: rgba(255, 202, 40, 0.8); /* Semi-transparent amber background */
+  padding: 0.5rem 0;
+  transition: opacity 0.5s ease-in-out; /* Added transition for smooth fade */
 }
 
 .era-section {
@@ -29,7 +32,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-.era-section h1{
+.era-section h1 {
   position: relative;
   z-index: 2;
 }
@@ -39,7 +42,7 @@
 }
 
 .era-section:hover .moving {
-  opacity: 0;
+  opacity: 1; /* Visible on hover */
 }
 
 .background-overlay {
@@ -47,14 +50,3 @@
   transition: opacity 0.5s ease-in-out;
   z-index: 0;
 }
-
-.moving {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  z-index: 1; /* middle layer */
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-

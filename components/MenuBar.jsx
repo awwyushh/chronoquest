@@ -22,11 +22,11 @@ function MenuBar({ onNavigate, onReturnHome, isNavbarVisible }) {
   return (
     <div 
       ref={menuRef} 
-      className="menu-wrapper fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 bg-black/80 backdrop-blur-md border-b border-white/10"
+      className="menu-wrapper fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 py-4 bg-transparent backdrop-blur-md border-b border-white/10"
     >
       <div className="flex items-center gap-2">
-        <Clock className="h-6 w-6 text-amber-400" />
-        <h1 className="text-xl font-bold tracking-wider">CHRONOS</h1>
+        {/* <Clock className="h-6 w-6 text-amber-400" /> */}
+        <h1 className="text-4xl text-amber-100 font-bold tracking-wider">CHRONOS</h1>
       </div>
       
       <div className="flex items-center gap-6">
