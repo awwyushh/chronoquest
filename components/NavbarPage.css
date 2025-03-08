@@ -1,0 +1,60 @@
+@keyframes moving {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}
+
+.movingin {
+  animation: moving 10s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.moving {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.era-section {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.era-section h1{
+  position: relative;
+  z-index: 2;
+}
+
+.era-section:hover {
+  transform: scale(1.02);
+}
+
+.era-section:hover .moving {
+  opacity: 0;
+}
+
+.background-overlay {
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.moving {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1; /* middle layer */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
